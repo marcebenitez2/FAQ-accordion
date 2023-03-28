@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --softRed: hsl(14, 88%, 65%);
+  --veryDarkGrayBlue: hsl(237, 12%, 33%);
+  --darkGrayBlue: hsl(240, 6%, 50%);
+  --lightGrayBlue: hsl(240, 5%, 91%);
+  --fontSize: 12px;
+}
+
+html{
+    font-size: var(--fontSize);
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background:linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%)); 
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background: white;
+    border-radius: 30px;
+    height: 509px;
+    width: 920px;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    grid-gap: 6rem;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position:1260% 65% ;
+}
+
+.preg-rta-acordeon > .rta{
+    display: none;
+}
+
+.activo > .rta {
+    display: block;
+    padding-bottom: 1.3rem;
+    color: var(--darkGrayBlue);
+}
+
+.activo img{
+    transform: rotate(180deg);
+    transition: all 0.2s ease-in;
+}
+
+.preg-acordeon{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.preg-rta-acordeon{
+    width: 350px;
+    border-bottom: 1px solid #e8e8ea;
+}
+
+.titulo-acordeon{
+    font-size: 3rem;
+    margin-top: 3rem;
+}
+
+.titulo-preg{
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--veryDarkGrayBlue);
+    margin: 1.4rem 0rem;
+}
+
+.preg{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.4s;
+    align-items: center;
+}
+
+.activo p {
+    font-weight: 700;
+}
+
+.preg img{
+    width: 1rem;
+    height: 1rem;
+}
+
+.container-img{
+    position: relative;
+}
+
+.imagen-contenedor{
+    background: url(./images/illustration-woman-online-desktop.svg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 120% center;
+}
+
+.box{
+    position: absolute;
+    top: 42%;
+    left: -25%;
+}
+
+@media (max-width: 700px) {
+    .container {
+      width: 350px;
+      grid-template-columns: 1fr;
+      grid-template-rows: 100px 1fr;
+      grid-gap: 0.5rem;
+      position: relative;
+      padding: 1rem;
+      height: 530px;
+    }
+    .container-img {
+      background: url("./images/bg-pattern-mobile.svg");
+      background-repeat: no-repeat;
+      background-position: center 590%;
+    }
+  
+    .imagen-contenedor {
+      position: absolute;
+      width: 100%;
+      height: 200px;
+      background-size: 72%;
+      background-position: center;
+      top: -129%;
+    }
+    .box {
+      width: 55px;
+      left: 19%;
+      top: -30%;
+    }
+    .container-preg {
+      margin-top: 0px;
+    }
+    .preg-rta-acordeon {
+      width: 100%;
+    }
+    .titulo-acordeon {
+      text-align: center;
+    }
+  }
+  
